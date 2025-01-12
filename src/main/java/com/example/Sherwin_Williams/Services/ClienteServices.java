@@ -1,20 +1,24 @@
-package com.example.Sherwin_Williams;
+package com.example.Sherwin_Williams.Services;
 
+import com.example.Sherwin_Williams.Cliente;
+import com.example.Sherwin_Williams.Repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 @Service
-public class Services {
-    @Autowired
-    private Repository repository;
+public class ClienteServices {
 
-    public Clientes consultar(Long id) {
+    @Autowired
+    private ClienteRepository repository;
+
+
+    public Cliente consultar(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Cliente não encontrado com ID: " + id));
     }
 
-    public Clientes cadastrar(Clientes cliente) {
+    public Cliente cadastrar(Cliente cliente) {
 
         if (repository.existsByCnpjCpf(cliente.getCnpjCpf())) {
             throw new RuntimeException("CPF/CNPJ já cadastrado.");
