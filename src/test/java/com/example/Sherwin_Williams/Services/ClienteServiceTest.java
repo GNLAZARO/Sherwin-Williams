@@ -1,7 +1,7 @@
 package com.example.Sherwin_Williams.Services;
 
-import com.example.Sherwin_Williams.Cliente;
-import com.example.Sherwin_Williams.Repository.ClienteRepository;
+import com.example.Sherwin_Williams.Entities.Cliente;
+import com.example.Sherwin_Williams.Repositories.ClienteRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,13 +13,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class ClienteServicesTest {
+class ClienteServiceTest {
 
     @Mock
     private ClienteRepository clienteRepository;
 
     @InjectMocks
-    private ClienteServices clienteServices;
+    private ClienteService clienteServices;
 
     @Test
     @DisplayName("Deve lançar exceção ao tentar cadastrar um cliente com CPF ou CNPJ já existente")

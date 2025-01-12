@@ -1,4 +1,4 @@
-package com.example.Sherwin_Williams;
+package com.example.Sherwin_Williams.Entities;
 
 import jakarta.persistence.*;
 import lombok.Data;

@@ -1,13 +1,13 @@
 package com.example.Sherwin_Williams.Services;
 
-import com.example.Sherwin_Williams.Cliente;
-import com.example.Sherwin_Williams.Repository.ClienteRepository;
+import com.example.Sherwin_Williams.Entities.Cliente;
+import com.example.Sherwin_Williams.Repositories.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 @Service
-public class ClienteServices {
+public class ClienteService {
 
     @Autowired
     private ClienteRepository repository;

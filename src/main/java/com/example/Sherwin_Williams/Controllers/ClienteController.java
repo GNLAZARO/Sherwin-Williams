@@ -1,7 +1,7 @@
-package com.example.Sherwin_Williams.Controller;
+package com.example.Sherwin_Williams.Controllers;
 
-import com.example.Sherwin_Williams.Cliente;
-import com.example.Sherwin_Williams.Services.ClienteServices;
+import com.example.Sherwin_Williams.Entities.Cliente;
+import com.example.Sherwin_Williams.Services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 public class ClienteController {
     @Autowired
-    private ClienteServices service;
+    private ClienteService service;
 
     @PostMapping("/cadastrar")
     public Cliente cadastrar(@RequestBody Cliente cliente) {
